@@ -1,0 +1,21 @@
+Enter main network's IP Address (e.g., 192.168.1.0): 192.168.1.0
+Enter the network size (CIDR notation, e.g., 24 for /24): 24
+Enter the number of subnets: 4
+Enter the name for subnet 1: Eng
+Enter the number of hosts for 'Eng': 20
+Enter the name for subnet 2: Financial
+Enter the number of hosts for 'Financial': 15
+Enter the name for subnet 3: HR
+Enter the number of hosts for 'HR': 5
+Enter the name for subnet 4: Manager
+Enter the number of hosts for 'Manager': 3
+
+
+Subnet Name | CIDR Notation   | Number of IPs | Used Hosts | Host IP Range               | Broadcast Address | Remaining Hosts | Network Capacity
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Eng       | 192.168.1.0/27  | 32 | 20 | 192.168.1.1 - 192.168.1.30  | 192.168.1.31 | 10 | 66.67%
+Financial | 192.168.1.32/27 | 32 | 15 | 192.168.1.33 - 192.168.1.62 | 192.168.1.63 | 15 | 50.0%
+HR        | 192.168.1.64/29 | 8  | 5  | 192.168.1.65 - 192.168.1.70 | 192.168.1.71 | 1  | 83.33%
+Manager   | 192.168.1.72/29 | 8  | 3  | 192.168.1.73 - 192.168.1.78 | 192.168.1.79 | 3  | 50.0%
+
+Process finished with exit code 0
