@@ -42,11 +42,9 @@ def calculate_subnet_mask(hosts):
 
 def vlsm_subnet_calculator_advanced(base_network, subnets_info):
     """
-    Advanced VLSM subnet calculator that checks if the total number of hosts for all subnets can fit within the base network.
-
-    :param base_network: The base network in CIDR notation (e.g., '192.168.1.0/24').
-    :param subnets_info: A dictionary with subnet names as keys and the number of required hosts as values.
-    :return: A dictionary with subnet details or an error message if subnetting cannot be completed.
+    base_network: The base network in CIDR notation (e.g., '192.168.1.0/24').
+    subnets_info: A dictionary with subnet names as keys and the number of required hosts as values.
+    return: A dictionary with subnet details or an error message if subnetting cannot be completed.
     """
     base_net = ipaddress.ip_network(base_network, strict=False)
     sorted_subnets = sorted(subnets_info.items(), key=lambda x: x[1], reverse=True)
